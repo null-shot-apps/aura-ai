@@ -65,20 +65,24 @@ export default function Landing() {
         </div>
       </main>
       
-      {/* Start Prompting arrow pointing left - bottom left */}
-      <div className="absolute left-6 md:left-8 bottom-[5%] z-20 flex items-center gap-3 arrow-point-left">
-        <div className="flex items-center gap-2 text-white/80 font-medium text-sm md:text-base">
+      {/* Navigation to Aura-AI Dashboard */}
+      <div className="absolute left-6 md:left-8 bottom-[5%] z-20 flex items-center gap-3">
+        <a 
+          href="/dashboard"
+          className="flex items-center gap-2 text-white/80 hover:text-white font-medium text-sm md:text-base transition-colors group"
+        >
           <svg 
-            className="w-5 h-5 md:w-6 md:h-6 animate-bounce-horizontal" 
+            className="w-5 h-5 md:w-6 md:h-6 group-hover:animate-bounce-horizontal" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          <span>Start prompting</span>
-        </div>
+          <span>Try Aura-AI Dashboard</span>
+        </a>
       </div>
     </div>
   );
 }
+
