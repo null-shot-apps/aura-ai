@@ -61,7 +61,7 @@ export function ChatInterface() {
         tokensEarned: Math.floor(Math.random() * 10) + 5,
         mcpData: {
           queryId: `q_${Date.now()}`,
-          category: detectCategory(inputValue),
+          category: detectCategory(),
           confidence: 0.85 + Math.random() * 0.15,
         }
       };
@@ -84,7 +84,7 @@ export function ChatInterface() {
     return `I analyzed your query using multiple data sources including market trends, historical patterns, and current indicators. My reasoning process involved: 1) Context analysis of "${query}", 2) Cross-referencing with similar scenarios, 3) Applying risk-benefit analysis, 4) Generating actionable recommendations based on probability weights.`;
   };
 
-  const detectCategory = (query: string): string => {
+  const detectCategory = (): string => {
     const categories = ['finance', 'learning', 'business', 'trends', 'personal'];
     return categories[Math.floor(Math.random() * categories.length)];
   };
@@ -226,3 +226,5 @@ export function ChatInterface() {
     </div>
   );
 }
+
+

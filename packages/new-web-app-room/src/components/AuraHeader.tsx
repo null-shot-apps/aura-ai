@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Bell, Settings, User, Sparkles } from 'lucide-react';
 
 export function AuraHeader() {
-  const [notifications, setNotifications] = useState(3);
+  const [notifications] = useState(3);
 
   return (
     <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-purple-200 dark:border-purple-800">
@@ -64,3 +64,4 @@ export function AuraHeader() {
     </header>
   );
 }
+

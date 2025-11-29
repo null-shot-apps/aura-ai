@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Database, Network, Shield, Activity, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface MCPResource {
@@ -21,7 +21,7 @@ interface MCPStats {
 }
 
 export function MCPStatus() {
-  const [mcpStats, setMcpStats] = useState<MCPStats>({
+  const [mcpStats] = useState<MCPStats>({
     totalResources: 15847,
     queriesStored: 6234,
     responsesStored: 6234,
@@ -30,7 +30,7 @@ export function MCPStatus() {
     uptime: 99.8
   });
 
-  const [recentResources, setRecentResources] = useState<MCPResource[]>([
+  const [recentResources] = useState<MCPResource[]>([
     {
       id: 'mcp_001',
       type: 'query',
@@ -204,3 +204,6 @@ export function MCPStatus() {
     </div>
   );
 }
+
+
+

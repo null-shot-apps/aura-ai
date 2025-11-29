@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Coins, TrendingUp, Gift, Info } from 'lucide-react';
+import { useState } from 'react';
+import { Coins, TrendingUp, Info } from 'lucide-react';
 
 interface TokenStats {
   balance: number;
@@ -11,14 +11,14 @@ interface TokenStats {
 }
 
 export function TokenDisplay() {
-  const [tokenStats, setTokenStats] = useState<TokenStats>({
+  const [tokenStats] = useState<TokenStats>({
     balance: 1250,
     earned: 2340,
     spent: 1090,
     streak: 7
   });
 
-  const [recentEarnings, setRecentEarnings] = useState([
+  const [recentEarnings] = useState([
     { action: 'Asked about market trends', tokens: 15, time: '2 min ago' },
     { action: 'Applied investment insight', tokens: 25, time: '1 hour ago' },
     { action: 'Shared feedback on recommendation', tokens: 10, time: '3 hours ago' },
@@ -121,3 +121,6 @@ export function TokenDisplay() {
     </div>
   );
 }
+
+
+
